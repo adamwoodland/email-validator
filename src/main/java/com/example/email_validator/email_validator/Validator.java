@@ -17,14 +17,14 @@ public class Validator {
 	}
 
 	public boolean validate ( ) {
-		if (email.matches("[^@]*@[^@]*") && email.matches(".*[.].*") && email.matches(".*[A-Za-z0-9]-*[A-Za-z0-9].*") && email.matches(".*[.]+((com)|(ca))"))
+		if (email.matches("[^@]*@[^@]*") && email.matches(".*[.].*"))
 			return true;
 		else
 			return false;
 	}
 	
 	public static void main (String [] args) {
-		Validator validator = new Validator("adamwoodland@icloud.ca");
+		Validator validator = new Validator("adamwoodland@icloud.com");
 		System.out.print(validator.validate());
 	}
 }
